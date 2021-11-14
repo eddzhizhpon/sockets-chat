@@ -1,7 +1,6 @@
 import sys
 from time import sleep
 
-# from PyQt5.QtCore import SIGNAL
 from PyQt5.QtWidgets import (
     QApplication,
     QHBoxLayout,
@@ -123,7 +122,7 @@ class Window(QWidget):
         self.update_messages.finished.connect(self.update_messages.deleteLater)
         self.thread.finished.connect(self.thread.deleteLater)
         self.update_messages.progress.connect(self.add_message)
-        # Step 6: Start the thread
+
         self.thread.start()
 
     def closeEvent(self, event):
